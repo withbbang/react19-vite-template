@@ -6,6 +6,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore } from 'redux-persist';
 import store from 'middlewares/configureStore';
 import App from 'App';
+import 'styles/style.css';
 
 if (import.meta.env.MODE === 'development') {
   const { worker } = await import('./mocks/browser');
