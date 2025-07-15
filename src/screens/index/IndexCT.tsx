@@ -4,7 +4,6 @@ import IndexPT from './IndexPT';
 
 function IndexCT({}: IndexCTProps): React.JSX.Element {
   useEffect(() => {}, []);
-
   return <IndexPT />;
 }
 
