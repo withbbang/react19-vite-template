@@ -25,6 +25,11 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: './src/setupTests.ts',
+    coverage: {
+      // https://chatgpt.com/c/68bfae54-d8c0-8326-a237-27b806e81b99 참고
+      provider: 'v8',
+      reporter: ['text', 'json', 'html'],
+    },
   },
   resolve: {
     alias: {
@@ -33,10 +38,11 @@ export default defineConfig({
   },
   build: {
     outDir: 'build',
-    minify: 'terser',
+    minify: 'esbuild',
     sourcemap: process.env.NODE_ENV === 'development',
   },
   server: {
-    port: 3000,
+    port: Number(process.env.VITE_PORT) || 3000,
+    open: true, // 자동으로 브라우저 열기
   },
 });

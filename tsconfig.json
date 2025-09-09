@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ESNext", // 최신 문법
     "module": "ESNext",
     "jsx": "react-jsx",
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "Node",
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true, // JSON 파일 불러오기
+    "isolatedModules": true,
+    "skipLibCheck": true, // 빌드 속도↑, 안전성↓ (보통 true 유지)
+    "forceConsistentCasingInFileNames": true, // 모든 파일을 독립적으로 컴파일 가능하게 해서, babel/swc 변환 시 불일치 에러 예방
     "types": ["vite/client", "vitest", "node"],
     "baseUrl": ".",
     "paths": {
