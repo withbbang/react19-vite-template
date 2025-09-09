@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "local": "vite",
+    "start": "vite",
     "build:dev": "env-cmd -f .env.development vite build --mode development",
     "build:prod": "env-cmd -f .env.production vite build --mode production",
     "build": "env-cmd -f .env.production vite build --mode production",

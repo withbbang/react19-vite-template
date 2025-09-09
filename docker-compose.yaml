@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  react19-vite-template:
+    container_name: react19-vite-template
+    image: withbbang/react19-vite-template
+    build:
+      context: ./react19-vite-template
+      dockerfile: Dockerfile
+    ports:
+      - '[port]:80'
+    networks:
+      - react19-vite-template
+    volumes:
+      - [path]
+    environment:
+      - TZ=Asia/Seoul
+    restart: always
+
+networks:
+  react19-vite-template:
+    driver: bridge
